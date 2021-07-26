@@ -1,22 +1,31 @@
-GET http://localhost:3001/api/persons HTTP/1.1
+GET http://localhost:3001/api/people HTTP/1.1
 
 ###
-GET http://localhost:3001/api/persons/1 HTTP/1.1
+GET http://localhost:3001/api/people/1 HTTP/1.1
 
 ###
-DELETE http://localhost:3001/api/persons/1 HTTP/1.1
+DELETE http://localhost:3001/api/people/1 HTTP/1.1
 
 ###
-POST http://localhost:3001/api/persons/ HTTP/1.1
+POST http://localhost:3001/api/people/ HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Anjala",
-    "number": "777-887998"
+    "name": "Anjala22",
+    "number": "777-882348"
 }
 
 ###
-POST https://mysterious-retreat-18142.herokuapp.com/api/persons/ HTTP/1.1
+POST http://localhost:3001/api/people/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Anjala22",
+    "number": "777-882348"
+}
+
+###
+POST https://mysterious-retreat-18142.herokuapp.com/api/people/ HTTP/1.1
 content-type: application/json
 
 {
@@ -25,4 +34,4 @@ content-type: application/json
 }
 
 ###
-GET https://mysterious-retreat-18142.herokuapp.com/api/persons HTTP/1.1
+GET https://mysterious-retreat-18142.herokuapp.com/api/people HTTP/1.1
