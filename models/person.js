@@ -6,25 +6,23 @@ const url = process.env.MONGODB_URI
 console.log('connecting to MongoDB')
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true })
-  .then(result => {
-    console.log('connected to MongoDB')
-  })
+  .then(console.log('connected to MongoDB'))
   .catch((error) => {
     console.log('error connecting to MongoDB:', error.message)
   })
 
 const personSchema = new mongoose.Schema({
-name: {
-  type: String,
-  required: true,
-  minlength: 3
+  name: {
+    type: String,
+    required: true,
+    minlength: 3
   // unique: true
-},
-number: {
-  type: String,
-  minlength: 8,
-  required: true
-}
+  },
+  number: {
+    type: String,
+    minlength: 8,
+    required: true
+  }
 })
 
 // personSchema.plugin(mongooseUniqueValidator)
